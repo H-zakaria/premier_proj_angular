@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular1';
+  name = 'zzz';
+  isDisabled:boolean = true;
+  addText:string = "pas de voiture ajoutés";
+  nomVoiture:string = "";
+
+  constructor(){
+    setTimeout(()=>{
+      this.isDisabled = false;
+    }, 2000);
+  }
+  afficherAlert(){
+    this.addText = 'une voiture a été ajoutée';
+  }
 }
